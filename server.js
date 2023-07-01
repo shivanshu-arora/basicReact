@@ -1,7 +1,9 @@
+var compression = require('compression')
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+app.use(compression())
 
 app.set('port', (process.env.PORT || 3000));
 
@@ -11,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Additional middleware which will set headers that we need on each request.
 app.use(function(req, res, next) {
+  console.log("here");
     // Set permissive CORS header - this allows this server to be used only as
     // an API server in conjunction with something like webpack-dev-server.
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -18,10 +21,6 @@ app.use(function(req, res, next) {
     // Disable caching so we'll always get the latest comments.
     res.setHeader('Cache-Control', 'no-cache');
     next();
-});
-
-app.get('/hello', function(req, res){
-  res.send("Hello World!");
 });
 
 // Need to set the host domain as well instead of just port
