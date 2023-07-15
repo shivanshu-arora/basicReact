@@ -33,3 +33,5 @@ npm run eject
 
 
 UI designs: https://excalidraw.com/#room=c61beed162f88b9da764,Qh9t3rdD4yspztRBlmWaBQ
+
+End-to-end express+db : https://levelup.gitconnected.com/creating-a-rest-api-with-node-js-and-express-a-step-by-step-guide-3bd7188fa219
