@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basic Testing WebPage</title>
+    <link rel="stylesheet" href="css/createBlog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="createBlog">
+        <div class="pageTitle">Create a new Post</div>
+        <div>
+            <label for:"categories">Select a category</label>
+            <select name="categories" id="categories">
+                <option value="Science">Science</option>
+                <option value="Health">Health</option>
+                <option value="Politics">Politics</option>
+                <option value="Sports">Sports</option>
+              </select>
+        </div>
+        <div>
+            <label for:"title">Enter a title</label>
+            <input type="text" id="title" name="title"><br><br>
+        </div>
+        <div>
+            <label for:"content">Enter content of the post</label><br>
+            <textarea placeholder="Enter the content of your post here." id="content" name="content" rows="10" cols="100"></textarea>
+        </div>
+        <div>
+            <button>Pulish Post</button>
+        </div>
+    </div>
+  </body>
+</html>
