@@ -41,3 +41,5 @@ sudo docker login -username irisplutonium@gmail.com -password docker@pluto123
 sudo docker pull irisplutonium/basic-react:v1.0
 sudo docker run --expose 80 irisplutonium/basic-react:v1.0
 sudo docker ps
+
+creating a mysql docker container and running mysql in it: https://hevodata.com/learn/docker-mysql/#How_to_Install_the_Docker_MySQL_Container
