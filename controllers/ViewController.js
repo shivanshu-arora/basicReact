@@ -1,15 +1,16 @@
 const getAllPosts = (req, res,next) => {
+    console.log("inside get request");
     return res.status(200).json({
         status: true,
         posts: [
             {
-                "title" : "Post1",
+                "Title" : "Post1",
                 "Category": "Science",
                 "Content" : "blah 1",
                 "Votes": 2
             },
             {
-                "title" : "Post2",
+                "Title" : "Post2",
                 "Category": "Health",
                 "Content" : "blah 2",
                 "Votes": 3
@@ -23,7 +24,7 @@ const upvote = (req, res, next) => {
         status: true,
         posts: [
             {
-                "title" : "Post1",
+                "Title" : "Post1",
                 "Category": "Science",
                 "Content" : "blah 1",
                 "Votes": 3
@@ -33,3 +34,4 @@ const upvote = (req, res, next) => {
 }
 
 module.exports = {getAllPosts, upvote};
+
