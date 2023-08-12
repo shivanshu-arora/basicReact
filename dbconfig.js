@@ -1,15 +1,8 @@
-const  config = {
+const config = {
     user:  'root', // sql user
-    password:  'shivangi', //sql user password
-    server: 'localhost', // if it does not work try- localhost
+    password:  'plutonium', //sql user password
     database:  'posts',
-    options: {
-      trustedconnection:  true,
-      enableArithAbort:  true,
-      encrypt: false,
-      keepAlive: true
-    },
-    port: 8080
+    host: 'localhost'
   }
   
   module.exports = config;
