@@ -1,3 +1,4 @@
+const { json } = require('body-parser');
 var  config = require('./../dbconfig.js');
 const  sql = require('mysql');
   
@@ -12,6 +13,22 @@ function getPosts() {
   })
 }
 
+function createPost(req) {
+  return new Promise(function(resolve, reject) {
+    const conn = sql.createConnection(config);
+    const sqlQuery = "Insert into feed(title, category, text) values ('"+req.title+"','"+ req.category+"','"+req.text+"')";
+    console.log("sqlQuery: ", sqlQuery);
+    conn.query(sqlQuery, function (err, data) {
+      console.log("posted data to table");
+      const res = {
+        "message": "Data posted successfully to table"
+      }
+      resolve(res);
+    });
+  })
+}
+
   module.exports = {
-    getPosts:  getPosts
+    getPosts:  getPosts,
+    createPost: createPost
   }

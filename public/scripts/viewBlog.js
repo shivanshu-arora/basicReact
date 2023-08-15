@@ -26,6 +26,11 @@ fetch(url)
     div.appendChild(ul);
   });
 
+  function routeToCreate(){
+    location.assign("CreateBlog.html");
+  }
+
+
 
 
 

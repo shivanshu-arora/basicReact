@@ -37,7 +37,7 @@ UI designs: https://excalidraw.com/#room=c61beed162f88b9da764,Qh9t3rdD4yspztRBlm
 End-to-end express+db : https://levelup.gitconnected.com/creating-a-rest-api-with-node-js-and-express-a-step-by-step-guide-3bd7188fa219
 
 docker commands:
-sudo docker login -username irisplutonium@gmail.com -password docker@pluto123 
+sudo docker login --username irisplutonium@gmail.com --password docker@pluto123 
 sudo docker pull irisplutonium/basic-react:v1.0
 sudo docker run --expose 3306 -p 3306:3306 --name=mysql -v /home/shivangi/basicReact/db/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=plutonium -d irisplutonium/basic-react:v1.0
 (-p would bind 3306 of container's port where sql runs to your localhost port and then --expose exposes the port

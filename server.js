@@ -12,12 +12,13 @@ app.set('port', (process.env.PORT || 3000));
 // UI route
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 //API routing
 app.use('/create', createPostRoutes);
 app.use('/view', viewPostRoutes);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
 
 // Additional middleware which will set headers that we need on each request.
 app.use(function(req, res, next) {
